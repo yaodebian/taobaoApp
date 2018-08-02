@@ -2,6 +2,13 @@
 ====
 学习webpack的时候想着自己手动通过进行webpack配置来进行搭建一个vue项目，于是就有了这个高仿淘宝APP.
 
+目录：
+----
+[项目实现](https://github.com/yaodebian/taobaoApp#项目实现)<br>
+[开发环境](https://github.com/yaodebian/taobaoApp#开发环境)<br>
+[项目截图](https://github.com/yaodebian/taobaoApp#项目截图)<br>
+[备注](https://github.com/yaodebian/taobaoApp#备注)<br>
+
 项目实现：
 ----
 * 1.淘宝基本页面的ui显示;

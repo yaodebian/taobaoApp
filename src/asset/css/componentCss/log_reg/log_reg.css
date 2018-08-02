@@ -1,0 +1,21 @@
+.logReg-input {
+  border-bottom: 1px solid #ff9900;
+}
+
+.getCheckCode {
+  border-radius: 15%/50%;
+  background-color: #f0f0f0;
+  padding: 0.16rem 0.2rem;
+  font-size: 0.3rem;
+  display: block;
+  color: #ff9900;
+}
+
+.login-button {
+  width: 100%;
+  border-radius: 0.5rem;
+  color: #fff;
+  margin-top: 0.5rem;
+  background: linear-gradient(to right, #ff9900, #ff2f00);
+  vertical-align: top;
+}

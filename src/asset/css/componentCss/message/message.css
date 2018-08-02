@@ -1,0 +1,149 @@
+.message-box {
+  background: #f0f0f0;
+}
+
+.message-head {
+  width: 100%;
+  background: linear-gradient(to right, #ff9900, #ff2f00);
+  color: #fff;
+  padding-bottom: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.message-head-title {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0.2rem;
+  font-size: 0.5rem;
+}
+
+.message-head-title-content {
+  height: 1rem;
+  line-height: 1rem;
+}
+
+.message-head-telbook {
+  font-size: 0.4rem;
+  margin-right: 0.1rem;
+  height: 1rem;
+  line-height: 1rem;
+}
+
+.message-head-add {
+  font-size: 0.4rem !important;
+}
+
+.msg-sta-text {
+  display: flex;
+  align-items: baseline;
+  font-size: 0.4rem;
+  padding: 0.1rem 0.25rem;
+}
+
+.msg-clear-body {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  margin-left: 0.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #fbc97f, #f99602) !important;
+}
+
+.msg-clear-icon {
+  font-size: 0.2rem !important;
+}
+
+.message-items {
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  z-index: 2;
+  background-color: #fff;
+  width: 9.5rem;
+  left: 50%;
+  top: 1.8rem;
+  margin-left: -4.75rem;
+  border-radius: 0.8rem;
+  box-shadow: 0 0.1rem 0.1rem rgba(0, 0, 0, 0.2);
+}
+
+.message-column {
+  text-align: center;
+  width: 1.4rem;
+  padding: 0.4rem 0;
+}
+
+.message-column-body {
+  width: 1.4rem;
+  height: 1.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.message-column-title {
+  font-size: 0.3rem;
+  color: #444;
+}
+
+.message-column-transport {
+  background: linear-gradient(to right, #87acce, #1e78ca) !important;
+}
+
+.message-column-inform {
+  background: linear-gradient(to right, #ffff00, #ffb600) !important;
+}
+
+.message-column-chat {
+  background: linear-gradient(to right, #9ffb9f, #00ff00) !important;
+}
+
+.icon-message {
+  font-size: 0.8rem !important;
+}
+
+.msgs {
+  margin-top: 1.5rem;
+}
+
+.msg-item {
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  padding: 0.2rem 0.25rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.msg-content {
+  display: flex;
+}
+
+.msg-fromer {
+  border-radius: 0.2rem;
+  width: 1.4rem;
+  height: 1.4rem;
+  margin-right: 0.1rem;
+}
+
+.msg-head {
+  font-size: 0.4rem;
+  height: 0.7rem;
+  line-height: 0.7rem;
+}
+
+.msg-tip {
+  font-size: 0.3rem;
+  color: #444;
+  height: 0.7rem;
+  line-height: 0.7rem;
+}
+
+.msg-time {
+  font-size: 0.2rem;
+  color: #444;
+}

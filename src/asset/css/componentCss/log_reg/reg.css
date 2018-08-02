@@ -1,0 +1,21 @@
+#regBox {
+  margin: 2rem 0.4rem 0.8rem 0.4rem;
+  text-align: center;
+}
+
+.regTip {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.4rem;
+  color: #000;
+}
+
+.clause {
+  font-size: 0.32rem;
+  text-align: left;
+}
+
+.clause-pre {
+  font-size: 0.4rem;
+  color: #aaa;
+}

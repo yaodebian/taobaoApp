@@ -1,0 +1,54 @@
+.loginBox {
+  text-align: center;
+  margin: 1.2rem 0.4rem 0.8rem 0.4rem;
+}
+
+.login-logo {
+  font-size: 1.6rem !important;
+  vertical-align: middle;
+  color: #d81e06;
+}
+
+.loginOptions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.1rem;
+  font-size: 0.4rem;
+}
+
+.passToggle {
+  font-size: 0.4rem;
+}
+
+.countItem {
+  height: 0.8rem;
+  border-bottom: 0.025rem solid #ff9900;
+  display: flex;
+  align-items: center;
+  padding: 0.16rem 0;
+  box-sizing: content-box;
+}
+
+.item-title {
+  font-size: 0.4rem;
+  width: 0.8rem;
+  height: 0.8rem;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+.countInput {
+  font-size: 0.4rem;
+  border: none;
+  outline: none;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  width: 100%;
+  display: block;
+  flex-shrink: 1;
+}
+
+.psw-toggle {
+  font-size: 0.72rem !important;
+  color: #666;
+}

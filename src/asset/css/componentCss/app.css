@@ -1,0 +1,104 @@
+h1 {
+  font-size: 0;
+  margin: 0;
+  -webkit-margin-before: 0rem !important;
+  -webkit-margin-after: 0rem !important;
+  height: 2rem;
+  line-height: 2rem;
+}
+
+.mint-cell-title {
+  width: 1.2rem !important;
+}
+
+.mint-cell-text {
+  vertical-align: baseline;
+}
+
+.mint-cell {
+  min-height: 0.8rem;
+  margin-bottom: 0.32rem;
+}
+
+.mint-cell-wrapper {
+  background-image: none;
+  padding: 0;
+}
+
+.headBar {
+  background: #fff;
+  color: #000;
+}
+
+.mint-header {
+  font-size: 0.44rem;
+  height: 1.2rem;
+}
+
+.mint-header-title {
+  height: 1.2rem;
+  line-height: 1.2rem;
+}
+
+.mint-tab-item {
+  padding: 0.2rem 0;
+}
+
+.mint-tab-item-label {
+  font-size: 0.3rem;
+}
+
+.mint-tab-item-icon {
+  width: 0.6rem;
+  height: 0.6rem;
+  margin: 0 auto 0.12rem;
+}
+
+.mint-cell-wrapper {
+  font-size: 0.4rem;
+}
+
+p {
+  margin: 0;
+  -webkit-margin-before: 0rem;
+  -webkit-margin-after: 0rem;
+}
+
+.mint-button--normal {
+  display: block;
+}
+
+.mint-swipe-items-wrap {
+  height: 3.125rem;
+}
+
+.mint-swipe-item {
+  height: 3.125rem;
+}
+
+.mint-swipe-items-wrap>div {
+  height: 3.125rem;
+}
+
+@media screen and (min-width:430px) and (max-width:750px) {
+  .mint-swipe-indicators {
+    bottom: -0.5rem;
+  }
+}
+
+@media screen and (min-width:750px) {
+  .mint-swipe-indicators {
+    bottom: -1rem;
+  }
+}
+
+.mint-navbar {
+  width: 100%;
+  background: linear-gradient(to right, #ff9900, #ff2f00) !important;
+}
+
+.mint-navbar .mint-tab-item.is-selected {
+  border-bottom: 3px solid #fff;
+  color: #fff;
+  margin-bottom: -3px;
+}

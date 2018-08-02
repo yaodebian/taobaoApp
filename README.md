@@ -18,15 +18,38 @@
 
 以下是相关的项目截图:
 ----
+* 首页<br>
 ![1](https://raw.githubusercontent.com/yaodebian/taobaoApp/master/reademeImgs/taobao1.PNG)<br>
+<br>
+* 微淘<br>
 ![2](https://raw.githubusercontent.com/yaodebian/taobaoApp/master/reademeImgs/taobao2.PNG)<br>
+<br>
+* 消息<br>
 ![3](https://raw.githubusercontent.com/yaodebian/taobaoApp/master/reademeImgs/taobao3.PNG)<br>
+<br>
+* 购物车<br>
 ![4](https://raw.githubusercontent.com/yaodebian/taobaoApp/master/reademeImgs/taobao4.PNG)<br>
+<br>
+* 登录注册<br>
 ![5](https://raw.githubusercontent.com/yaodebian/taobaoApp/master/reademeImgs/taobao5.PNG)<br>
+<br>
+* 我的淘宝<br>
 ![6](https://raw.githubusercontent.com/yaodebian/taobaoApp/master/reademeImgs/taobao6.PNG)<br>
+<br>
+* 一键切换主题<br>
 ![7](https://raw.githubusercontent.com/yaodebian/taobaoApp/master/reademeImgs/taobao7.PNG)<br>
+<br>
+* 搜索海贼王并回车进行跳转（仅限海贼王）<br>
 ![8](https://raw.githubusercontent.com/yaodebian/taobaoApp/master/reademeImgs/taobao8.PNG)<br>
+<br>
+* 商品列表<br>
 ![9](https://raw.githubusercontent.com/yaodebian/taobaoApp/master/reademeImgs/taobao9.PNG)<br>
+<br>
+* 商品展示页面<br>
 ![10](https://raw.githubusercontent.com/yaodebian/taobaoApp/master/reademeImgs/taobao10.PNG)<br>
+<br>
+* 加入购物车<br>
 ![11](https://raw.githubusercontent.com/yaodebian/taobaoApp/master/reademeImgs/taobao11.PNG)<br>
+<br>
+* 购物车进行相关操作
 ![12](https://raw.githubusercontent.com/yaodebian/taobaoApp/master/reademeImgs/taobao12.PNG)<br>

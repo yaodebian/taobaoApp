@@ -13,8 +13,8 @@
 ----
 * 前台：vuejs、vue-router、vuex、axios、mint ui、mockjs、webpack
 * 后台：nodejs、mysql
-
-这里是包含了前台的相关代码，后台只是为了实现登录注册。
+  
+`这里是包含了前台的相关代码，后台只是为了实现登录注册。`
 
 以下是相关的项目截图:
 ----

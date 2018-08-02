@@ -14,7 +14,7 @@
 * 前台：vuejs、vue-router、vuex、axios、mint ui、mockjs、webpack
 * 后台：nodejs、mysql
 
-以下是相关的项目截图:
+项目截图:
 ----
 * 首页<br>
 ![1](https://raw.githubusercontent.com/yaodebian/taobaoApp/master/reademeImgs/taobao1.PNG)<br>

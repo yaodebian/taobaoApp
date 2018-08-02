@@ -1,6 +1,6 @@
 基于vuejs与webpack对淘宝App进行高仿
 ====
-    学习webpack的时候想着自己手动通过进行webpack配置来进行搭建一个vue项目，于是就有了这个高仿淘宝APP.
+学习webpack的时候想着自己手动通过进行webpack配置来进行搭建一个vue项目，于是就有了这个高仿淘宝APP.
 
 项目实现：
 ----
@@ -13,8 +13,8 @@
 ----
 * 前台：vuejs、vue-router、vuex、axios、mint ui、mockjs、webpack
 * 后台：nodejs、mysql
-  
-`这里是包含了前台的相关代码，后台只是为了实现登录注册。`
+
+这里是包含了前台的相关代码，后台只是为了实现登录注册。
 
 以下是相关的项目截图:
 ----

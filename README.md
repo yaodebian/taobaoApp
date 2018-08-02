@@ -13,15 +13,15 @@
 这里是包含了前台的相关代码，后台只是为了实现登录注册。<br>
 <br>
 以下是相关的项目截图：<br>
-![Image text]（https://raw.githubusercontent.com/yaodebian/taobaoApp/master/reademeImgs/taobao1.PNG）<br>
-![Image text]（https://raw.githubusercontent.com/yaodebian/taobaoApp/master/reademeImgs/taobao2.PNG）<br>
-![Image text]（https://raw.githubusercontent.com/yaodebian/taobaoApp/master/reademeImgs/taobao3.PNG）<br>
-![Image text]（https://raw.githubusercontent.com/yaodebian/taobaoApp/master/reademeImgs/taobao4.PNG）<br>
-![Image text]（https://raw.githubusercontent.com/yaodebian/taobaoApp/master/reademeImgs/taobao5.PNG）<br>
-![Image text]（https://raw.githubusercontent.com/yaodebian/taobaoApp/master/reademeImgs/taobao6.PNG）<br>
-![Image text]（https://raw.githubusercontent.com/yaodebian/taobaoApp/master/reademeImgs/taobao7.PNG）<br>
-![Image text]（https://raw.githubusercontent.com/yaodebian/taobaoApp/master/reademeImgs/taobao8.PNG）<br>
-![Image text]（https://raw.githubusercontent.com/yaodebian/taobaoApp/master/reademeImgs/taobao9.PNG）<br>
-![Image text]（https://raw.githubusercontent.com/yaodebian/taobaoApp/master/reademeImgs/taobao10.PNG）<br>
-![Image text]（https://raw.githubusercontent.com/yaodebian/taobaoApp/master/reademeImgs/taobao11.PNG）<br>
-![Image text]（https://raw.githubusercontent.com/yaodebian/taobaoApp/master/reademeImgs/taobao12.PNG）<br>
+![1]（https://raw.githubusercontent.com/yaodebian/taobaoApp/master/reademeImgs/taobao1.PNG）<br>
+![2]（https://raw.githubusercontent.com/yaodebian/taobaoApp/master/reademeImgs/taobao2.PNG）<br>
+![3]（https://raw.githubusercontent.com/yaodebian/taobaoApp/master/reademeImgs/taobao3.PNG）<br>
+![4]（https://raw.githubusercontent.com/yaodebian/taobaoApp/master/reademeImgs/taobao4.PNG）<br>
+![5]（https://raw.githubusercontent.com/yaodebian/taobaoApp/master/reademeImgs/taobao5.PNG）<br>
+![6]（https://raw.githubusercontent.com/yaodebian/taobaoApp/master/reademeImgs/taobao6.PNG）<br>
+![7]（https://raw.githubusercontent.com/yaodebian/taobaoApp/master/reademeImgs/taobao7.PNG）<br>
+![8]（https://raw.githubusercontent.com/yaodebian/taobaoApp/master/reademeImgs/taobao8.PNG）<br>
+![9]（https://raw.githubusercontent.com/yaodebian/taobaoApp/master/reademeImgs/taobao9.PNG）<br>
+![10]（https://raw.githubusercontent.com/yaodebian/taobaoApp/master/reademeImgs/taobao10.PNG）<br>
+![11（https://raw.githubusercontent.com/yaodebian/taobaoApp/master/reademeImgs/taobao11.PNG）<br>
+![12]（https://raw.githubusercontent.com/yaodebian/taobaoApp/master/reademeImgs/taobao12.PNG）<br>

@@ -14,8 +14,6 @@
 * 前台：vuejs、vue-router、vuex、axios、mint ui、mockjs、webpack
 * 后台：nodejs、mysql
 
-这里是包含了前台的相关代码，后台只是为了实现登录注册。
-
 以下是相关的项目截图:
 ----
 * 首页<br>
@@ -64,3 +62,8 @@
 
 * 购物车进行相关操作<br>
 ![12](https://raw.githubusercontent.com/yaodebian/taobaoApp/master/reademeImgs/taobao12.PNG)<br>
+
+备注
+----
+* 项目中只包含了前台的相关代码，后台只是为了实现登录注册;
+* 虽然设置了eslint，但是编写时并未开启，故运行会有很多代码规范问题;

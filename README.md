@@ -62,5 +62,5 @@
 ![11](https://raw.githubusercontent.com/yaodebian/taobaoApp/master/reademeImgs/taobao11.PNG)<br>
 <br>
 
-* 购物车进行相关操作
+* 购物车进行相关操作<br>
 ![12](https://raw.githubusercontent.com/yaodebian/taobaoApp/master/reademeImgs/taobao12.PNG)<br>

@@ -7,8 +7,11 @@
 [项目实现](https://github.com/yaodebian/taobaoApp#项目实现)<br>
 [开发环境](https://github.com/yaodebian/taobaoApp#开发环境)<br>
 [项目截图](https://github.com/yaodebian/taobaoApp#项目截图)<br>
+[功能添加](https://github.com/yaodebian/taobaoApp#功能添加)<br>
+* [用户名管理](https://github.com/yaodebian/taobaoApp#用户名管理)<br>
+* [搜索栏模糊查询](https://github.com/yaodebian/taobaoApp#搜索栏模糊查询)<br>
+
 [备注](https://github.com/yaodebian/taobaoApp#备注)<br>
-[备注](https://github.com/yaodebian/taobaoApp#功能添加)<br>
 
 项目实现：
 ----
@@ -74,9 +77,15 @@
 功能添加：
 -----
 * 用户名管理<br>
+![13](https://raw.githubusercontent.com/yaodebian/taobaoApp/master/reademeImgs/taobao13.PNG)<br>
+![14](https://raw.githubusercontent.com/yaodebian/taobaoApp/master/reademeImgs/taobao14.PNG)<br>
+![15](https://raw.githubusercontent.com/yaodebian/taobaoApp/master/reademeImgs/taobao15.PNG)<br>
 
-
-* 搜索栏登录态<br>
+* 搜索栏模糊查询<br>
+![16](https://raw.githubusercontent.com/yaodebian/taobaoApp/master/reademeImgs/taobao16.PNG)<br>
+![17](https://raw.githubusercontent.com/yaodebian/taobaoApp/master/reademeImgs/taobao17.PNG)<br>
+![18](https://raw.githubusercontent.com/yaodebian/taobaoApp/master/reademeImgs/taobao18.PNG)<br>
+![19](https://raw.githubusercontent.com/yaodebian/taobaoApp/master/reademeImgs/taobao19.PNG)<br>
 
 备注
 ----

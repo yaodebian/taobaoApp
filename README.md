@@ -8,9 +8,6 @@
 [开发环境](https://github.com/yaodebian/taobaoApp#开发环境)<br>
 [项目截图](https://github.com/yaodebian/taobaoApp#项目截图)<br>
 [功能添加](https://github.com/yaodebian/taobaoApp#功能添加)<br>
-* [用户名管理](https://github.com/yaodebian/taobaoApp#用户名管理)<br>
-* [搜索栏模糊查询](https://github.com/yaodebian/taobaoApp#搜索栏模糊查询)<br>
-
 [备注](https://github.com/yaodebian/taobaoApp#备注)<br>
 
 项目实现：

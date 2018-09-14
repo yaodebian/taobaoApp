@@ -8,6 +8,7 @@
 [开发环境](https://github.com/yaodebian/taobaoApp#开发环境)<br>
 [项目截图](https://github.com/yaodebian/taobaoApp#项目截图)<br>
 [备注](https://github.com/yaodebian/taobaoApp#备注)<br>
+[备注](https://github.com/yaodebian/taobaoApp#功能添加)<br>
 
 项目实现：
 ----
@@ -69,6 +70,13 @@
 
 * 购物车进行相关操作<br>
 ![12](https://raw.githubusercontent.com/yaodebian/taobaoApp/master/reademeImgs/taobao12.PNG)<br>
+
+功能添加：
+-----
+* 用户名管理<br>
+
+
+* 搜索栏登录态<br>
 
 备注
 ----

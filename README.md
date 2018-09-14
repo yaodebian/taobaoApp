@@ -73,12 +73,12 @@
 
 功能添加：
 -----
-用户名管理<br>
+* 用户名管理<br>
 ![13](https://raw.githubusercontent.com/yaodebian/taobaoApp/master/reademeImgs/taobao13.PNG)<br>
 ![14](https://raw.githubusercontent.com/yaodebian/taobaoApp/master/reademeImgs/taobao14.PNG)<br>
 ![15](https://raw.githubusercontent.com/yaodebian/taobaoApp/master/reademeImgs/taobao15.PNG)<br>
 
-搜索栏模糊查询<br>
+* 搜索栏模糊查询<br>
 ![16](https://raw.githubusercontent.com/yaodebian/taobaoApp/master/reademeImgs/taobao16.PNG)<br>
 ![17](https://raw.githubusercontent.com/yaodebian/taobaoApp/master/reademeImgs/taobao17.PNG)<br>
 ![18](https://raw.githubusercontent.com/yaodebian/taobaoApp/master/reademeImgs/taobao18.PNG)<br>

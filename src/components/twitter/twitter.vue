@@ -58,24 +58,22 @@
     </div>
 </template>
 <script>
-    import {
-        mapGetters
-    } from 'vuex'
-    export default {
-        name: "twitter",
-        data() {
-            return {
-                msg: "hello",
-                selected: "1"
-            };
-        },
-        beforeRouteEnter(to, from, next) {
-            next(vm => {
-                vm.$store.dispatch("initSelectedNav", 'twitter');
-            })
-        },
-        computed: {
-            ...mapGetters(['twitters', 'skin', 'skinSta'])
-        }
+import { mapGetters } from "vuex";
+export default {
+  name: "twitter",
+  data() {
+    return {
+      msg: "hello",
+      selected: "1"
     };
+  },
+  beforeRouteEnter(to, from, next) {
+    next(vm => {
+      vm.$store.dispatch("initSelectedNav", "twitter");
+    });
+  },
+  computed: {
+    ...mapGetters(["twitters", "skin", "skinSta"])
+  }
+};
 </script>

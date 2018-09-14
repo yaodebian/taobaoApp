@@ -2,18 +2,18 @@
     <div id="space-center">
         <div id="space-head" :style="skinSta ? {background: skin.topicColor} : ''">
             <mt-header title="yaodebian" fixed class="space-headBar" :style="skinSta ? {background: skin.topicColor} : ''">
-                <p slot="right">设置</p>
+                <p slot="right"  @click="settingPage">设置</p>
             </mt-header>
             <div class="person-box">
                 <div class="user-info">
-                    <img class="user-pic" src="../../../static/icons/icon.svg" alt="">
+                    <img class="user-pic" :src="`http://localhost:8081/userImgs/${userImg}`" alt="">
                     <div>
-                        <p class="username userInfoItem" v-text="username"></p>
+                        <p class="username userInfoItem" v-text="nick"></p>
                         <!-- <p class="username userInfoItem">yaodebian</p> -->
                         <p class="family-count userInfoItem"><i class="iconfont icon-jia family-icon"></i>我的亲情账号></p>
                     </div>
                 </div>
-                <p class="userInfoItem">设置</p>
+                <p class="userInfoItem" @click="settingPage">设置</p>
             </div>
             <div class="simpleItems">
                 <div>
@@ -138,36 +138,36 @@
     </div>
 </template>
 <script>
-import {mapGetters} from 'vuex';
+import { mapGetters } from 'vuex'
 import personal from '../../asset/js/componentJs/personal/personal.js'
 export default {
-  name: "personal",
+  name: 'personal',
   data() {
     return {
-      msg: "hello"
-    };
+      msg: 'hello'
+    }
   },
   beforeRouteEnter(to, from, next) {
-      next(vm => {
-          vm.$store.dispatch("initSelectedNav", "personal");
-          if (!vm.$store.getters.loginSta) {
-              vm.$router.push('/login');
-          }
-      })
+    next(vm => {
+      vm.$store.dispatch('initSelectedNav', 'personal')
+      if (!vm.$store.getters.loginSta) {
+        vm.$router.push('/login')
+      }
+    })
   },
   methods: {
-      ...personal
+    ...personal
   },
   computed: {
-      ...mapGetters(['username', 'skin', 'skinCode', 'skinSta'])
+    ...mapGetters(['nick', 'skin', 'skinCode', 'skinSta', 'userImg'])
   },
   mounted() {
-    let scrollLen = $(window).scrollTop();
+    let scrollLen = $(window).scrollTop()
     if (scrollLen == 0) {
-      $(".space-headBar").css("opacity", 0);
-      $(".person-box").css("opacity", 1);
+      $('.space-headBar').css('opacity', 0)
+      $('.person-box').css('opacity', 1)
     }
-    window.addEventListener("scroll", this.scrollHeadToggle);
+    window.addEventListener('scroll', this.scrollHeadToggle)
   }
-};
+}
 </script>

@@ -9,18 +9,14 @@
     </div>
 </template>
 <script>
-    import {
-        mapGetters
-    } from "vuex";
-    export default {
-        name: 'cart_head',
-        data() {
-            return {
-
-            }
-        },
-        computed: {
-            ...mapGetters(["skin", "skinSta", "cartItems"])
-        }
-    }
+import { mapGetters } from "vuex";
+export default {
+  name: "cart_head",
+  data() {
+    return {}
+  },
+  computed: {
+    ...mapGetters(["skin", "skinSta", "cartItems"])
+  }
+};
 </script>

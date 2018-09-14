@@ -9,6 +9,10 @@ import goods from './modules/goods.js'
 import cart from './modules/cart.js'
 import logReg from './modules/log_reg.js'
 import nav from './modules/nav.js'
+import userSet from './modules/userSet.js'
+import keywords from './modules/keywords.js';
+import searchVal from './modules/searchVal.js';
+import seller from './modules/seller.js';
 
 Vue.use(Vuex)
 
@@ -22,6 +26,10 @@ const state = {
   ...cart.state,
   ...logReg.state,
   ...nav.state,
+  ...userSet.state,
+  ...keywords.state,
+  ...searchVal.state,
+  ...seller.state
 }
 
 const mutations = {
@@ -33,7 +41,11 @@ const mutations = {
   ...goods.mutations,
   ...cart.mutations,
   ...logReg.mutations,
-  ...nav.mutations
+  ...nav.mutations,
+  ...userSet.mutations,
+  ...keywords.mutations,
+  ...searchVal.mutations,
+  ...seller.mutations
 }
 
 const getters = {
@@ -45,7 +57,11 @@ const getters = {
   ...goods.getters,
   ...cart.getters,
   ...logReg.getters,
-  ...nav.getters
+  ...nav.getters,
+  ...userSet.getters,
+  ...keywords.getters,
+  ...searchVal.getters,
+  ...seller.getters
 }
 
 const actions = {
@@ -57,7 +73,11 @@ const actions = {
   ...goods.actions,
   ...cart.actions,
   ...logReg.actions,
-  ...nav.actions
+  ...nav.actions,
+  ...userSet.actions,
+  ...keywords.actions,
+  ...searchVal.actions,
+  ...seller.actions
 }
 
 export default new Vuex.Store({

@@ -7,6 +7,10 @@ h1 {
   line-height: 2rem;
 }
 
+.mintui {
+  font-size: 0.44rem !important;
+}
+
 .mint-cell-title {
   width: 1.2rem !important;
 }
@@ -101,4 +105,25 @@ p {
   border-bottom: 3px solid #fff;
   color: #fff;
   margin-bottom: -3px;
+}
+
+.block-flex {
+  display: flex;
+}
+
+.block-spaceBetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.block-spaceAround {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.block-alignCenter {
+  display: flex;
+  align-items: center;
 }

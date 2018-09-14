@@ -7,7 +7,7 @@ function priceAll() {
   let price = 0;
   for (let item in this.cartItems) {
     if (this.checkVals[item]) {
-      price += parseFloat(this.cartItems[item].price) * this.cartCountNum[item];
+      price += parseFloat(this.cartItems[item].goodsPrice) * this.cartCountNum[item];
     }
     console.log();
   }
@@ -50,20 +50,23 @@ function addNum(index) {
 
 function reduceNum(index) {
   let that = this;
-  if (this.cartCountNum[index] != 0) {
+  if (this.cartCountNum[index] != 1) {
     Vue.set(
       that.$store.state.cartCountNum,
       index,
       --that.$store.state.cartCountNum[index]
     );
   }
-  console.log(this.cartCountNum);
+  Toast({
+    message: '该宝贝不能减少了哟',
+    position: "middle",
+    duration: 2000
+  });
 }
 
 function payoff() {
   if (this.selectedNum != 0) {
     let arr1 = [];
-    console.log()
     for (let item in this.checkVals) {
       if (this.checkVals[item]) {
         arr1.push(item);

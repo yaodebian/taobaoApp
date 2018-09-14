@@ -11,13 +11,11 @@
     </div>
 </template>
 <script>
-    export default {
-        name: 'topline',
-        data() {
-            return {
-
-            }
-        },
-        computed: {}
-    }
+export default {
+  name: "topline",
+  data() {
+    return {};
+  },
+  computed: {}
+};
 </script>

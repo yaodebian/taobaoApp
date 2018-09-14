@@ -25,13 +25,13 @@ const state = {
 
 const mutations = {
   initTwitters(state, data) {
-    state.twitters = data;
+    state.twitters = data
   }
 }
 
 const getters = {
   twitters(state) {
-    return state.twitters;
+    return state.twitters
   }
 }
 
@@ -39,7 +39,7 @@ const actions = {
   initTwitters({
     commit
   }, data) {
-    commit('initTwitters', data);
+    commit('initTwitters', data)
   }
 }
 

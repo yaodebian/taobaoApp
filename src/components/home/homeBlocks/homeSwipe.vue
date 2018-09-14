@@ -8,18 +8,14 @@
         </div>
 </template>
 <script>
-    import {
-        mapGetters
-    } from 'vuex';
-    export default {
-        name: 'homeSwipe',
-        data() {
-            return {
-                
-            }
-        },
-        computed: {
-            ...mapGetters(['swipes'])
-        }
-    }
+import { mapGetters } from "vuex";
+export default {
+  name: "homeSwipe",
+  data() {
+    return {};
+  },
+  computed: {
+    ...mapGetters(["swipes"])
+  }
+};
 </script>

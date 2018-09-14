@@ -42,23 +42,23 @@
     </div>
 </template>
 <script>
-    import {mapGetters} from 'vuex'
-    export default {
-        name: 'message',
-        data() {
-            return {
-                msg: 'hello'
-            }
-        },
-        beforeRouteEnter(to, from, next) {
-            next(vm => {
-                vm.$store.dispatch("initSelectedNav", 'message');
-            })
-        },
-        computed: {
-            ...mapGetters(['skin', 'skinSta'])
-        }
-    }
+import { mapGetters } from "vuex";
+export default {
+  name: "message",
+  data() {
+    return {
+      msg: "hello"
+    };
+  },
+  beforeRouteEnter(to, from, next) {
+    next(vm => {
+      vm.$store.dispatch("initSelectedNav", "message");
+    });
+  },
+  computed: {
+    ...mapGetters(["skin", "skinSta"])
+  }
+};
 </script>
 <style>
 </style>

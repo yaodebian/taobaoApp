@@ -55,6 +55,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
 
   // 这是开发服务配置，包括热替换什么的 依赖  ./config.js
   devServer: {
+    disableHostCheck: true,
     // 当使用内联模式(inline mode)时，控制台(console)将显示消息，可能的值有 none, error, warning 或者 info（默认值）。
     clientLogLevel: 'warning',
     // 当使用 HTML5 History API 时，任意的 404 响应都可能需要被替代为 index.html

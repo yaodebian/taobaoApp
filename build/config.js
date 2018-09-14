@@ -7,7 +7,7 @@ module.exports = {
     proxyTable: {},
     host: 'localhost',
     port: '8080',
-    autoOpenBrowser: true, // 是否自动打开浏览器
+    autoOpenBrowser: false, // 是否自动打开浏览器
     errorOverlay: true, // 浏览器错误提示遮罩层
     notifyOnErrors: true, // 编译错误的时候通知提示，需要friendly-errors-webpack-plugin 配合
     poll: false, // 轮询设置

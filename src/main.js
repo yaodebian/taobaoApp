@@ -1,6 +1,6 @@
-import Vue from 'vue';
-import router from '@/router';
-import store from '@/store/store';
+import Vue from 'vue'
+import router from '@/router'
+import store from '@/store/store'
 import axios from 'axios'
 // import MintUI from 'mint-ui'
 import {
@@ -11,7 +11,10 @@ import {
   tabItem,
   Navbar,
   Button,
-  Field
+  Field,
+  Cell,
+  Popup,
+  Search
 } from 'mint-ui'
 import 'mint-ui/lib/style.css'
 
@@ -39,19 +42,8 @@ import './asset/css/componentCss/goods/goodShowPage.css'
 
 import './asset/css/componentCss/app.css'
 
-import App from './App';
+import App from './App'
 
-// Vue.use(Toast);
-// Vue.use(Swipe);
-// Vue.use(SwipeItem);
-// Vue.use(Header);
-// Vue.use(Tabbar);
-// Vue.use(tabItem);
-// Vue.use(Navbar);
-// Vue.use(Button)
-// Vue.use(Field);
-
-// Vue.component(Toast.name, Toast)
 Vue.component(Swipe.name, Swipe)
 Vue.component(SwipeItem.name, SwipeItem)
 Vue.component(Header.name, Header)
@@ -60,9 +52,13 @@ Vue.component(tabItem.name, tabItem)
 Vue.component(Navbar.name, Navbar)
 Vue.component(Button.name, Button)
 Vue.component(Field.name, Field)
+Vue.component(Cell.name, Cell)
+Vue.component(Popup.name, Popup)
+Vue.component(Search.name, Search)
 
-Vue.config.productionTip = false;
-Vue.prototype.axios = axios;
+Vue.config.productionTip = false
+axios.defaults.withCredentials = true
+Vue.prototype.axios = axios
 
 new Vue({
   el: '#app',

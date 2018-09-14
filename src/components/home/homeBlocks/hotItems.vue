@@ -7,18 +7,14 @@
     </div>
 </template>
 <script>
-    import {
-        mapGetters
-    } from 'vuex';
-    export default {
-        name: 'hotItems',
-        data() {
-            return {
-
-            }
-        },
-        computed: {
-            ...mapGetters(['hotItems'])
-        }
-    }
+import { mapGetters } from "vuex";
+export default {
+  name: "hotItems",
+  data() {
+    return {};
+  },
+  computed: {
+    ...mapGetters(["hotItems"])
+  }
+};
 </script>

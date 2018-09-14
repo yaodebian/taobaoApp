@@ -12,6 +12,14 @@ import  Reg from '@/components/log_reg/reg'
 import  Goods from '@/components/goods/goods'
 import  GoodShowPage from '@/components/goods/goodShowPage'
 
+import  User from '@/components/user/user'
+import  Setting from '@/components/user/setting'
+import  UserInfo from '@/components/user/userInfo'
+import  NickEdit from '@/components/user/nickEdit'
+import  UsernameEdit from '@/components/user/usernameEdit'
+
+import Search from '@/components/search/search'
+
 Vue.use(VueRouter)
 
 const router = new VueRouter({
@@ -68,6 +76,38 @@ const router = new VueRouter({
             path: '/goodShowPage',
             name: 'goodShowPage',
             component: GoodShowPage
+        },
+        {
+          path: '/search',
+          name: 'search',
+          component: Search
+        },
+        {
+            path: '/user',
+            name: 'user',
+            component: User,
+            children: [
+              {
+                path: 'setting',
+                name: 'setting',
+                component: Setting
+              },
+              {
+                path: 'userInfo',
+                name: 'userInfo',
+                component: UserInfo
+              },
+              {
+                path: 'nickEdit',
+                name: 'nickEdit',
+                component: NickEdit
+              },
+              {
+                path: 'usernameEdit',
+                name: 'usernameEdit',
+                component: UsernameEdit
+              },
+            ]
         }
     ]
 })

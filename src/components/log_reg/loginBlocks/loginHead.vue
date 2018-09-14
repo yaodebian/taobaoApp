@@ -8,12 +8,10 @@
         </div>
 </template>
 <script>
-    export default {
-        name: 'loginHead',
-        data() {
-            return {
-
-            }
-        }
-    }
+export default {
+  name: "loginHead",
+  data() {
+    return {};
+  }
+};
 </script>

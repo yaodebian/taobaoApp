@@ -18,40 +18,40 @@ const mutations = {
       checkCode: '',
       checkCodeMsg: "请输入验证",
       buttonActive: true
-    };
+    }
   },
   initCheckCode(state, data) {
-    state.checkCode = data;
+    state.checkCode = data
   },
   initCheckCodeMsg(state, data) {
-    state.checkCodeMsg = data;
+    state.checkCodeMsg = data
   },
   initGetCheckable(state, data) {
-    state.getCheckable = data;
+    state.getCheckable = data
   },
   initButtonActive(state, data) {
-    state.buttonActive = data;
+    state.buttonActive = data
   }
 }
 
 const getters = {
   count(state) {
-    return state.logRegData.count;
+    return state.logRegData.count
   },
   password(state) {
-    return state.logRegData.password;
+    return state.logRegData.password
   },
   getCheckable(state) {
-    return state.logRegData.getCheckable;
+    return state.logRegData.getCheckable
   },
   checkCode(state) {
-    return state.logRegData.checkCode;
+    return state.logRegData.checkCode
   },
   checkCodeMsg(state) {
-    return state.logRegData.checkCodeMsg;
+    return state.logRegData.checkCodeMsg
   },
   buttonActive(state) {
-    return state.logRegData.buttonActive;
+    return state.logRegData.buttonActive
   }
 }
 
@@ -59,27 +59,27 @@ const actions = {
   initLogReg({
     commit
   }) {
-    commit('initLogReg');
+    commit('initLogReg')
   },
   initCheckCode({
     commit
   }, data) {
-    commit('initCheckCode', data);
+    commit('initCheckCode', data)
   },
   initCheckCodeMsg({
     commit
   }, data) {
-    commit('initCheckCodeMsg', data);
+    commit('initCheckCodeMsg', data)
   },
   initGetCheckable({
     commit
   }, data) {
-    commit('initGetCheckable', data);
+    commit('initGetCheckable', data)
   },
   initButtonActive({
     commit
   }, data) {
-    commit('initButtonActive', data);
+    commit('initButtonActive', data)
   }
 }
 

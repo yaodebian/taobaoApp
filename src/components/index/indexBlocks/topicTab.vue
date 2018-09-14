@@ -20,23 +20,19 @@
     </div>
 </template>
 <script>
-    import index from '../../../asset/js/componentJs/index/index.js';
-    import {
-        mapGetters
-    } from "vuex";
+import index from "../../../asset/js/componentJs/index/index.js";
+import { mapGetters } from "vuex";
 
-    export default {
-        name: 'topicTab',
-        data() {
-            return {
-
-            }
-        },
-        methods: {
-            pageToggle: index.pageToggle
-        },
-        computed: {
-            ...mapGetters(["skinSta", "skin", 'selectedNav'])
-        }
-    }
+export default {
+  name: "topicTab",
+  data() {
+    return {};
+  },
+  methods: {
+    pageToggle: index.pageToggle
+  },
+  computed: {
+    ...mapGetters(["skinSta", "skin", "selectedNav"])
+  }
+};
 </script>

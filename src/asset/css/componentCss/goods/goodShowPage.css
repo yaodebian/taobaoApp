@@ -49,6 +49,7 @@
 }
 
 .goodpage-discount-item {
+  margin-top: 0.2rem;
   display: flex;
   justify-content: space-between
 }
@@ -57,7 +58,10 @@
   margin: 0.2rem 0;
 }
 
-.goodpage-light {
+.goodpage-light-icon {
+  color: #666;
+  font-size: 0.44rem !important;
+  vertical-align: middle;
   color: #666;
 }
 

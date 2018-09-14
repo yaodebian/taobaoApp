@@ -3,6 +3,9 @@ function scrollHeadToggle() {
   let scrollLen = $(window).scrollTop();
 
   let remVal = parseInt($("html").css("font-Size")) * 0.4;
+  if (scrollLen == 0) {
+    $(".person-box").css("z-index", 2);
+  }
   if (scrollLen < remVal) {
     $(".space-headBar").css("opacity", scrollLen / remVal);
     $(".person-box").css("opacity", 1 - scrollLen / remVal);
@@ -25,7 +28,12 @@ function easySetSkin() {
   this.$store.dispatch("setSkin", randomCode);
 }
 
+function settingPage() {
+  this.$router.push('/user/setting');
+}
+
 export default {
   scrollHeadToggle,
-  easySetSkin
+  easySetSkin,
+  settingPage
 }

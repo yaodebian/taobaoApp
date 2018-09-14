@@ -42,26 +42,26 @@ const state = {
 
 const mutations = {
   setSkin(state, data) {
-    state.skinSta = true;
-    state.skinCode = data;
+    state.skinSta = true
+    state.skinCode = data
   },
   recover(state) {
-    state.skinSta = false;
+    state.skinSta = false
   },
   initSkins(state, data) {
-    state.skins = data;
+    state.skins = data
   }
 }
 
 const getters = {
   skinSta(state) {
-    return state.skinSta;
+    return state.skinSta
   },
   skinCode(state) {
-    return state.skinCode;
+    return state.skinCode
   },
   skin(state) {
-    return state.skins[state.skinCode];
+    return state.skins[state.skinCode]
   }
 }
 
@@ -69,17 +69,17 @@ const actions = {
   setSkin({
     commit
   }, data) {
-    commit('setSkin', data);
+    commit('setSkin', data)
   },
   initSkins({
     commit
   }, data) {
-    commit('initSkins', data);
+    commit('initSkins', data)
   },
   recover({
     commit
   }) {
-    commit('recover');
+    commit('recover')
   }
 }
 

@@ -6,23 +6,19 @@
     </div>
 </template>
 <script>
-    import {
-        mapGetters
-    } from 'vuex';
-    export default {
-        name: 'pageContent',
-        data() {
-            return {
-
-            }
-        },
-        computed: {
-            ...mapGetters(['showingGood'])
-        },
-        methods: {
-            addIntoCart() {
-                this.$store.dispatch('initCartItems', this.showingGood);
-            }
-        }
+import { mapGetters } from "vuex";
+export default {
+  name: "pageContent",
+  data() {
+    return {};
+  },
+  computed: {
+    ...mapGetters(["showingGood"])
+  },
+  methods: {
+    addIntoCart() {
+      this.$store.dispatch("initCartItems", this.showingGood);
     }
+  }
+};
 </script>

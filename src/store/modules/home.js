@@ -49,19 +49,19 @@ const state = {
 
 const mutations = {
   initSwipes(state, data) {
-    state.swipes = data;
+    state.swipes = data
   },
   initHotItems(state, data) {
-    state.hotItems = data;
+    state.hotItems = data
   }
 }
 
 const getters = {
   swipes(state) {
-    return state.swipes;
+    return state.swipes
   },
   hotItems(state) {
-    return state.hotItems;
+    return state.hotItems
   }
 }
 
@@ -69,12 +69,12 @@ const actions = {
   initSwipes({
     commit
   }, data) {
-    commit('initSwipes', data);
+    commit('initSwipes', data)
   },
   initHotItems({
     commit
   }, data) {
-    commit('initHotItems', data);
+    commit('initHotItems', data)
   }
 }
 

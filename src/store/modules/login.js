@@ -4,13 +4,16 @@ const state = {
 
 const mutations = {
   login(state) {
-    state.loginSta = true;
+    state.loginSta = true
+  },
+  logOff(state) {
+    state.loginSta = false;
   }
 }
 
 const getters = {
   loginSta(state) {
-    return state.loginSta;
+    return state.loginSta
   }
 }
 
@@ -18,7 +21,12 @@ const actions = {
   login({
     commit
   }) {
-    commit('login');
+    commit('login')
+  },
+  logOff({
+    commit
+  }) {
+    commit('logOff')
   }
 }
 

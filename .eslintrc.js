@@ -21,6 +21,7 @@ module.exports = {
   ],
   // add your custom rules here
   rules: {
+    "quotes": [1, "single"],
     'no-multiple-empty-lines': 0,
     'no-tabs': 'off',
     // allow async-await

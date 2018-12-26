@@ -7,7 +7,7 @@ const mutations = {
     state.loginSta = true
   },
   logOff(state) {
-    state.loginSta = false;
+    state.loginSta = false
   }
 }
 

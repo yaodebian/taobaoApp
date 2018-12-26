@@ -48,16 +48,16 @@
     </div>
 </template>
 <script>
-import { mapGetters } from "vuex";
+import { mapGetters } from 'vuex'
 export default {
-  name: "pageContent",
+  name: 'pageContent',
   data() {
-    return {};
+    return {}
   },
   computed: {
-    ...mapGetters(["showingGood", 'seller'])
+    ...mapGetters(['showingGood', 'seller'])
   }
-};
+}
 </script>
 <style>
 .pageContent-store-info {

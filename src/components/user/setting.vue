@@ -58,44 +58,42 @@
   </div>
 </template>
 <script>
-import { mapGetters } from 'vuex';
-import cookie from "../../asset/js/toolJs/cookie.js";
+import { mapGetters } from 'vuex'
+import cookie from "../../asset/js/toolJs/cookie.js"
 export default {
   data() {
     return {
       
-    };
+    }
   },
   beforeRouteEnter(to, from, next) {
     next(vm => {
       if (!vm.$store.getters.loginSta) {
-        console.log(11);
-        vm.$router.push("/login");
+        vm.$router.push('/login')
       }
       else {
-        console.log('yaodebian');
-        vm.$store.dispatch("initUserHead", {
+        vm.$store.dispatch('initUserHead', {
           path: '/personal',
           label: '设置'
         })
       }
-    });
+    })
   },
   methods: {
     setUserInfo() {
-      this.$router.push('/user/userInfo');
+      this.$router.push('/user/userInfo')
     },
     logOff() {
-      this.$store.dispatch('logOff');
-      this.$store.dispatch('clearUserInfo');
-      this.$router.push('/login');
-      cookie.delCookie('phone');
+      this.$store.dispatch('logOff')
+      this.$store.dispatch('clearUserInfo')
+      this.$router.push('/login')
+      cookie.delCookie('phone')
     }
   },
   computed: {
-    ...mapGetters(['username', 'nick','userImg'])
+    ...mapGetters(['username', 'nick', 'userImg'])
   }
-};
+}
 </script>
 <style>
 .mint-cell-wrapper {

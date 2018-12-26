@@ -7,11 +7,11 @@ const state = {
 
 const mutations = {
   initGoods(state, data) {
-    state.goods = data;
+    state.goods = data
   },
   initShowingGood(state, data) {
-    if (typeof data == 'number') {
-      state.showingGood = state.goods[data];
+    if (typeof data === 'number') {
+      state.showingGood = state.goods[data]
     } else {
       state.showingGood = data
     }
@@ -31,12 +31,12 @@ const actions = {
   initGoods({
     commit
   }, data) {
-    commit("initGoods", data)
+    commit('initGoods', data)
   },
   initShowingGood({
     commit
   }, data) {
-    commit("initShowingGood", data)
+    commit('initShowingGood', data)
   }
 }
 

@@ -1,10 +1,10 @@
 const state = {
   logRegData: {
-    count: "",
-    password: "",
+    count: '',
+    password: '',
     getCheckable: true,
     checkCode: '',
-    checkCodeMsg: "请输入验证码",
+    checkCodeMsg: '请输入验证码',
     buttonActive: true
   }
 }
@@ -12,11 +12,11 @@ const state = {
 const mutations = {
   initLogReg(state) {
     state.logRegData = {
-      count: "",
-      password: "",
+      count: '',
+      password: '',
       getCheckable: true,
       checkCode: '',
-      checkCodeMsg: "请输入验证",
+      checkCodeMsg: '请输入验证',
       buttonActive: true
     }
   },

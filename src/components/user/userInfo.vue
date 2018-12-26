@@ -41,21 +41,21 @@
     data() {
       return {
 
-      };
+      }
     },
     beforeRouteEnter(to, from, next) {
       next(vm => {
         if (!vm.$store.getters.loginSta) {
-          console.log(11);
-          vm.$router.push("/login");
+          console.log(11)
+          vm.$router.push("/login")
         } else {
-          console.log(111);
+          console.log(111)
           vm.$store.dispatch("initUserHead", {
             path: '/user/setting',
             label: '个人资料'
           })
         }
-      });
+      })
     },
     computed: {
       ...mapGetters(['username', 'nick', 'userImg'])

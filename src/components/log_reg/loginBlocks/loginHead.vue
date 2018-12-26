@@ -9,9 +9,9 @@
 </template>
 <script>
 export default {
-  name: "loginHead",
+  name: 'loginHead',
   data() {
-    return {};
+    return {}
   }
-};
+}
 </script>

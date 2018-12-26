@@ -11,13 +11,13 @@ const state = {
 
 const mutations = {
   initSeller(state, data) {
-    state.seller = data;
+    state.seller = data
   }
 }
 
 const getters = {
   seller(state) {
-    return state.seller;
+    return state.seller
   }
 }
 
@@ -25,7 +25,7 @@ const actions = {
   initSeller({
     commit
   }, data) {
-    commit('initSeller', data);
+    commit('initSeller', data)
   }
 }
 

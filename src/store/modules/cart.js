@@ -1,24 +1,31 @@
 const state = {
-  cartItems: [],
-  cartCountNum: []
+  cartItems: [] // 购物车项
 }
 
 const mutations = {
   initCartItems(state, data) {
-    state.cartItems.push(data)
-    state.cartCountNum.push(1)
-  },
-  addCartCountNum(state, data) {
-    state.cartCountNum[data]++
-  },
-  reduceCartCountNum(state, data) {
-    state.cartCountNum[data]--
+    let temp = state.cartItems
+    let good = data.good
+    let seller = data.seller
+    for (let item in temp) {
+      if (temp[item].sellerName === seller.storeName) {
+        temp[item].list.push(good)
+        temp[item].cartCountNum.push(1)
+        return
+      }
+    }
+    temp.push({
+      sellerName: seller.storeName,
+      sellerImg: seller.sellerImg,
+      cartCountNum: [1],
+      list: [good]
+    })
   },
   removeCartItems(state, data) {
     let arr1 = []
     let arr2 = []
     for (let item in state.cartItems) {
-      if (data.indexOf(item) == -1) {
+      if (data.indexOf(item) === -1) {
         arr1.push(state.cartItems[item])
         arr2.push(state.cartCountNum[item])
       }
@@ -32,26 +39,20 @@ const getters = {
   cartItems(state) {
     return state.cartItems
   },
-  cartCountNum(state) {
-    return state.cartCountNum
+  cartItemsCount (state) {
+    let count = 0
+    for (let item of state.cartItems) {
+      count += item.list.length
+    }
+    return count
   }
 }
 
 const actions = {
   initCartItems({
     commit
-  }, data) {
-    commit("initCartItems", data)
-  },
-  addCartCountNum({
-    commit
-  }, data) {
-    commit("addCartCountNum", data)
-  },
-  reduceCartCountNum({
-    commit
-  }, data) {
-    commit("reduceCartCountNum", data)
+  }, data, seller) {
+    commit("initCartItems", data, seller)
   },
   removeCartItems({
     commit

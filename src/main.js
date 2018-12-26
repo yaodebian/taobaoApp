@@ -21,24 +21,7 @@ import 'mint-ui/lib/style.css'
 import './asset/css/iconfont/iconfont.css'
 import '../mock/mock'
 
-import './asset/css/componentCss/index/index.css'
-
-import './asset/css/componentCss/home/home.css'
-
-import './asset/css/componentCss/twitter/twitter.css'
-
-import './asset/css/componentCss/message/message.css'
-
-import './asset/css/componentCss/cart/cart.css'
-
-import './asset/css/componentCss/personal/personal.css'
-
 import './asset/css/componentCss/log_reg/log_reg.css'
-import './asset/css/componentCss/log_reg/login.css'
-import './asset/css/componentCss/log_reg/reg.css'
-
-import './asset/css/componentCss/goods/goods.css'
-import './asset/css/componentCss/goods/goodShowPage.css'
 
 import './asset/css/componentCss/app.css'
 
@@ -60,7 +43,7 @@ Vue.config.productionTip = false
 axios.defaults.withCredentials = true
 Vue.prototype.axios = axios
 
-new Vue({
+let vm = new Vue({
   el: '#app',
   router,
   store,
@@ -68,4 +51,8 @@ new Vue({
     App
   },
   template: '<App />'
+})
+
+Vue.use({
+  vm
 })

@@ -10,10 +10,10 @@
         data() {
             return {
                 msg: "yaodebian"
-            };
+            }
         },
         methods: {
 
         }
-    };
+    }
 </script>

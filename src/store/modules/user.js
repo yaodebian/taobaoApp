@@ -10,15 +10,15 @@ const mutations = {
   initUser(state, data) {
     state.userId = data.userId
     state.username = data.username
-    state.phone = data.phone,
-    state.userImg = data.userImg,
+    state.phone = data.phone
+    state.userImg = data.userImg
     state.nick = data.nick
   },
   editNick(state, data) {
-    state.nick = data;
+    state.nick = data
   },
   editUsername(state, data) {
-    state.username = data;
+    state.username = data
   },
   regInit(state, data) {
     state.userId = data.userId
@@ -27,24 +27,27 @@ const mutations = {
   clearUserInfo(state) {
     state.userId = ''
     state.username = '点击我设置你的登录名吧'
-    state.phone = '',
-    state.userImg = 'icon.svg',
+    state.phone = ''
+    state.userImg = 'icon.svg'
     state.nick = '点击我设置昵称吧'
   }
 }
 
 const getters = {
+  userId (state) {
+    return state.userId
+  },
   username(state) {
-    return state.username;
+    return state.username
   },
   phone(state) {
-    return state.phone;
+    return state.phone
   },
   userImg(state) {
-    return state.userImg;
+    return state.userImg
   },
   nick(state) {
-    return state.nick;
+    return state.nick
   }
 }
 

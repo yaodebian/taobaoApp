@@ -7,13 +7,13 @@ const state = {
 
 const mutations = {
   initUserHead(state, data) {
-    state.userHead = data;
+    state.userHead = data
   }
 }
 
 const getters = {
   userHead(state) {
-    return state.userHead;
+    return state.userHead
   }
 }
 
@@ -21,7 +21,7 @@ const actions = {
   initUserHead({
     commit
   }, data) {
-    commit('initUserHead', data);
+    commit('initUserHead', data)
   }
 }
 

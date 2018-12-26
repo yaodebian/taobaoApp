@@ -30,17 +30,18 @@ module.exports = {
   },
   module: {
     rules: [
-      // {
-      //   test: /\.(js|vue)$/,
-      //   loader: 'eslint-loader',
-      //   enforce: 'pre',
-      //   include: [resolve('src')],
-      //   exclude: /node_modules/,
-      //   options: {
-      //     formatter: require('eslint-friendly-formatter'),
-      //     emitWarning: !config.dev.showEslintErrorsInOverlay
-      //   }
-      // },
+      {
+        test: /\.(js|vue)$/,
+        loader: 'eslint-loader',
+        enforce: 'pre',
+        include: [resolve('src')],
+        exclude: /node_modules/,
+        options: {
+          fix: true,
+          formatter: require('eslint-friendly-formatter'),
+          emitWarning: !config.dev.showEslintErrorsInOverlay
+        }
+      },
       {
         test: /\.vue$/,
         loader: 'vue-loader',

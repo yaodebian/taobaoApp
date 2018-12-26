@@ -5,18 +5,18 @@
             <span class="cart-head-manage">管理</span>
         </div>
         <p class="cart-sta-text">共
-            <span v-text="cartItems.length"></span>件宝贝</p>
+            <span v-text="cartItemsCount"></span>件宝贝</p>
     </div>
 </template>
 <script>
-import { mapGetters } from "vuex";
+import { mapGetters } from 'vuex'
 export default {
-  name: "cart_head",
+  name: 'cart_head',
   data() {
     return {}
   },
   computed: {
-    ...mapGetters(["skin", "skinSta", "cartItems"])
+    ...mapGetters(['skin', 'skinSta', 'cartItemsCount'])
   }
-};
+}
 </script>

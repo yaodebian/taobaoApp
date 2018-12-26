@@ -8,11 +8,8 @@
 <script>
   import {
     Toast
-  } from "mint-ui"
+  } from 'mint-ui'
   import trim from '../../asset/js/toolJs/trim.js'
-  import {
-    mapGetters
-  } from 'vuex'
   export default {
     data() {
       return {
@@ -21,32 +18,32 @@
     },
     beforeRouteEnter(to, from, next) {
       next(vm => {
-        vm.nick = vm.$store.state.nick;
+        vm.nick = vm.$store.state.nick
         if (!vm.$store.getters.loginSta) {
-          console.log(11);
-          vm.$router.push("/login");
+          console.log(11)
+          vm.$router.push("/login")
         } else {
-          console.log('yaodebian');
+          console.log('yaodebian')
           vm.$store.dispatch("initUserHead", {
             path: '/user/userInfo',
             label: '淘宝昵称'
           })
         }
-      });
+      })
     },
     methods: {
       saveNick() {
-        let that = this;
-        let nick = trim.trim(that.nick);
-        let nickRegExp = /^(?![_0-9])(?!.*?_$)[\u4E00-\u9FA5_a-zA-Z0-9]{1,10}$/;
-        let userId = that.$store.state.userId;
-        if (nick != '' && nickRegExp.test(nick)) {
+        let that = this
+        let nick = trim.trim(that.nick)
+        let nickRegExp = /^(?![_0-9])(?!.*?_$)[\u4E00-\u9FA5_a-zA-Z0-9]{1,10}$/
+        let userId = that.$store.state.userId
+        if (nick !== '' && nickRegExp.test(nick)) {
           that.axios.post('http://localhost:8081/user/saveNick', {
               userId,
               nick
             }, {
               headers: {
-                "Content-Type": "application/json;charset=utf-8"
+                "Content-Type": "application/jsoncharset=utf-8"
               }
             })
             .then(function (res) {
@@ -54,24 +51,24 @@
                 message: "昵称保存成功",
                 position: "middle",
                 duration: 2000
-              });
-              that.$store.dispatch('editNick', nick);
+              })
+              that.$store.dispatch('editNick', nick)
             })
             .catch(function (err) {
-              console.log(err);
-            });
-        } else if (nick == '') {
+              console.log(err)
+            })
+        } else if (nick === '') {
           Toast({
             message: "昵称不能为空",
             position: "middle",
             duration: 2000
-          });
+          })
         } else {
           Toast({
             message: "昵称请设置1-10位字符或中文",
             position: "middle",
             duration: 2000
-          });
+          })
         }
       }
     }

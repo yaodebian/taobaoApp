@@ -16,28 +16,34 @@
     </div>
 </template>
 <script>
-import { mapGetters } from "vuex";
-import passLogin from "../../../asset/js/componentJs/logReg/login/passLogin.js";
+import { mapGetters } from 'vuex'
 export default {
-  name: "passLogin",
+  name: 'passLogin',
   data() {
     return {
       showPsw: false,
-      passIcon: "icon-mimayincang"
-    };
+      passIcon: 'icon-mimayincang'
+    }
   },
   computed: {
     ...mapGetters([
-      "count",
-      "password",
-      "getCheckable",
-      "checkCode",
-      "checkCodeMsg",
-      "buttonActive"
+      'count',
+      'password',
+      'getCheckable',
+      'checkCode',
+      'checkCodeMsg',
+      'buttonActive'
     ])
   },
   methods: {
-    passShowToggle: passLogin.passShowToggle
+    passShowToggle() {
+      this.showPsw = !this.showPsw
+      if (this.showPsw) {
+        this.passIcon = 'icon-mimachakan'
+        return
+      }
+      this.passIcon = 'icon-mimayincang'
+    }
   }
-};
+}
 </script>

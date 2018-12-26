@@ -1,6 +1,6 @@
 function getGoods(searchVal, el) {
-  let that = this;
-  if (el != undefined) that = el;
+  let that = this
+  if (el !== undefined) that = el
     that.axios.post("http://localhost:8081/goods/getGoods",{
       searchVal
     },{
@@ -9,12 +9,12 @@ function getGoods(searchVal, el) {
       }
     })
       .then(function (res) {
-        that.$store.dispatch('initGoods', res.data);
-        that.$router.push("/goods");
-        sessionStorage.setItem('searchValue', searchVal);
+        that.$store.dispatch('initGoods', res.data)
+        that.$router.push("/goods")
+        sessionStorage.setItem('searchValue', searchVal)
       })
       .catch(function (err) {
-        console.log(err);
+        console.log(err)
       })
 }
 

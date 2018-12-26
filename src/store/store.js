@@ -10,9 +10,9 @@ import cart from './modules/cart.js'
 import logReg from './modules/log_reg.js'
 import nav from './modules/nav.js'
 import userSet from './modules/userSet.js'
-import keywords from './modules/keywords.js';
-import searchVal from './modules/searchVal.js';
-import seller from './modules/seller.js';
+import keywords from './modules/keywords.js'
+import searchVal from './modules/searchVal.js'
+import seller from './modules/seller.js'
 
 Vue.use(Vuex)
 

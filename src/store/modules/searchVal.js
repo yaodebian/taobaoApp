@@ -4,13 +4,13 @@ const state = {
 
 const mutations = {
   initSearchVal(state, data) {
-    state.searchVal = data;
+    state.searchVal = data
   }
 }
 
 const getters = {
   searchVal(state) {
-    return state.keywords;
+    return state.keywords
   }
 }
 
@@ -18,7 +18,7 @@ const actions = {
   initSearchVal({
     commit
   }, data) {
-    commit('initSearchVal', data);
+    commit('initSearchVal', data)
   }
 }
 

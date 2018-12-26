@@ -14,7 +14,7 @@
       return {
         showPsw: false,
         passIcon: "icon-mimayincang"
-      };
+      }
     }
-  };
+  }
 </script>

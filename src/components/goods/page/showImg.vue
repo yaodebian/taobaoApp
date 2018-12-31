@@ -1,9 +1,13 @@
 <template>
-    <div>
-        <div class="goodpage-showimg-box">
-            <img :src="`/static/imgs/goods/${showingGood.img}`" class="goodpage-showimg" alt="">
-        </div>
+  <div>
+    <div class="goodpage-showimg-box">
+      <img
+        :src="`/static/imgs/goods/${showingGood.img}`"
+        class="goodpage-showimg"
+        alt=""
+      >
     </div>
+  </div>
 </template>
 <script>
 import { mapGetters } from 'vuex'

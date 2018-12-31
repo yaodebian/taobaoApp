@@ -1,13 +1,28 @@
 <template>
-    <div>
-        <h1>
-            <i class="iconfont icon-taobao login-logo"></i>
-        </h1>
-        <mt-field class="logReg-input" label="+86>" placeholder="请输入手机号" type="tel" v-model="$store.state.logRegData.count"></mt-field>
-        <mt-field label="" placeholder="请输入验证码" class="logReg-input" v-model="$store.state.logRegData.password">
-            <span class="getCheckCode" @click="loginCodeOperate" v-text="checkCodeMsg"></span>
-        </mt-field>
-    </div>
+  <div>
+    <h1>
+      <i class="iconfont icon-taobao login-logo"></i>
+    </h1>
+    <mt-field
+      class="logReg-input"
+      label="+86>"
+      placeholder="请输入手机号"
+      type="tel"
+      v-model="$store.state.logRegData.count"
+    ></mt-field>
+    <mt-field
+      label=""
+      placeholder="请输入验证码"
+      class="logReg-input"
+      v-model="$store.state.logRegData.password"
+    >
+      <span
+        class="getCheckCode"
+        @click="loginCodeOperate"
+        v-text="checkCodeMsg"
+      ></span>
+    </mt-field>
+  </div>
 </template>
 <script>
 import { Toast } from "mint-ui"
@@ -37,14 +52,14 @@ export default {
           .post("http://localhost:8081/checkCode/getLoginCode", {
             count
           })
-          .then(function(res) {
+          .then(function (res) {
             if (res.data) {
               Vue.set(that.$store.state.logRegData, "getCheckable", false)
               let num = 60
               let checkCode = res.data.checkCode
               Vue.set(that.$store.state.logRegData, "checkCode", checkCode)
               //实现验证码秒数倒计时效果
-              let codeInterval = window.setInterval(function() {
+              let codeInterval = window.setInterval(function () {
                 if (num !== 0) {
                   Vue.set(
                     that.$store.state.logRegData,
@@ -71,7 +86,7 @@ export default {
               duration: 2000
             })
           })
-          .catch(function(err) {
+          .catch(function (err) {
             console.log(err)
           })
         return

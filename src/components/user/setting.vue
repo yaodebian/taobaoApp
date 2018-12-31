@@ -1,12 +1,22 @@
 <template>
   <div class="setting">
     <div class="set-contentItems">
-      <div class="set-personal block-spaceBetween" @click="setUserInfo">
+      <div
+        class="set-personal block-spaceBetween"
+        @click="setUserInfo"
+      >
         <div class="block-alignCenter">
-          <img :src="`http://localhost:8081/userImgs/${userImg}`" class="set-personal-img" alt="">
+          <img
+            :src="`http://localhost:8081/userImgs/${userImg}`"
+            class="set-personal-img"
+            alt=""
+          >
           <div>
             <p v-text="nick"></p>
-            <p class="set-vipname" v-text="`会员名：${username}`"></p>
+            <p
+              class="set-vipname"
+              v-text="`会员名：${username}`"
+            ></p>
           </div>
         </div>
         <div class="set-personal-icons">
@@ -17,44 +27,82 @@
       <div class="set-hr">
         <p class="set-hr-line"></p>
       </div>
-      <mt-cell title="我的收获地址" class="set-bottomMargin" to="#" value="">
+      <mt-cell
+        title="我的收获地址"
+        class="set-bottomMargin"
+        to="#"
+        value=""
+      >
         <i class="iconfont icon-icon_on_the_right set-icon-right"></i>
       </mt-cell>
-      <mt-cell title="账户与安全" class="set-bottomMargin" to="#" value="">
+      <mt-cell
+        title="账户与安全"
+        class="set-bottomMargin"
+        to="#"
+        value=""
+      >
         <i class="iconfont icon-icon_on_the_right set-icon-right"></i>
       </mt-cell>
-      <mt-cell title="地区设置" to="#" value="">
-        <i class="iconfont icon-icon_on_the_right set-icon-right"></i>
-      </mt-cell>
-      <div class="set-hr">
-        <p class="set-hr-line"></p>
-      </div>
-      <mt-cell title="音效与通知" to="#" value="">
-        <i class="iconfont icon-icon_on_the_right set-icon-right"></i>
-      </mt-cell>
-      <div class="set-hr">
-        <p class="set-hr-line"></p>
-      </div>
-      <mt-cell title="隐私" to="#" value="">
-        <i class="iconfont icon-icon_on_the_right set-icon-right"></i>
-      </mt-cell>
-      <div class="set-hr">
-        <p class="set-hr-line"></p>
-      </div>
-      <mt-cell title="通用" class="set-bottomMargin" to="#" value="">
-        <i class="iconfont icon-icon_on_the_right set-icon-right"></i>
-      </mt-cell>
-      <mt-cell title="问题反馈" to="#" value="">
+      <mt-cell
+        title="地区设置"
+        to="#"
+        value=""
+      >
         <i class="iconfont icon-icon_on_the_right set-icon-right"></i>
       </mt-cell>
       <div class="set-hr">
         <p class="set-hr-line"></p>
       </div>
-      <mt-cell title="关于手机淘宝" to="#" value="">
+      <mt-cell
+        title="音效与通知"
+        to="#"
+        value=""
+      >
+        <i class="iconfont icon-icon_on_the_right set-icon-right"></i>
+      </mt-cell>
+      <div class="set-hr">
+        <p class="set-hr-line"></p>
+      </div>
+      <mt-cell
+        title="隐私"
+        to="#"
+        value=""
+      >
+        <i class="iconfont icon-icon_on_the_right set-icon-right"></i>
+      </mt-cell>
+      <div class="set-hr">
+        <p class="set-hr-line"></p>
+      </div>
+      <mt-cell
+        title="通用"
+        class="set-bottomMargin"
+        to="#"
+        value=""
+      >
+        <i class="iconfont icon-icon_on_the_right set-icon-right"></i>
+      </mt-cell>
+      <mt-cell
+        title="问题反馈"
+        to="#"
+        value=""
+      >
+        <i class="iconfont icon-icon_on_the_right set-icon-right"></i>
+      </mt-cell>
+      <div class="set-hr">
+        <p class="set-hr-line"></p>
+      </div>
+      <mt-cell
+        title="关于手机淘宝"
+        to="#"
+        value=""
+      >
         <i class="iconfont icon-icon_on_the_right set-icon-right"></i>
       </mt-cell>
     </div>
-    <div class="set-footer" @click="logOff">退出当前账号</div>
+    <div
+      class="set-footer"
+      @click="logOff"
+    >退出当前账号</div>
   </div>
 </template>
 <script>
@@ -63,7 +111,7 @@ import cookie from "../../asset/js/toolJs/cookie.js"
 export default {
   data() {
     return {
-      
+
     }
   },
   beforeRouteEnter(to, from, next) {

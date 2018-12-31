@@ -43,9 +43,8 @@ export default {
   methods: {
     addIntoCart() {
       if (this.loginSta) {
-        this.$store.dispatch("initCartItems", { good: this.showingGood, seller: this.seller })
         let that = this
-        this.axios.post("http://localhost:8081/cart/addIntoCart", {
+        this.axios.post('http://localhost:8081/cart/addIntoCart', {
           goodsId: that.showingGood.goodsId,
           userId: that.userId
         }, {
@@ -61,6 +60,11 @@ export default {
             })
           })
           .catch(function (err) {
+            Toast({
+              message: '该宝贝添加购物车失败',
+              position: 'middle',
+              duration: 2000
+            })
             console.log(err)
           })
       }

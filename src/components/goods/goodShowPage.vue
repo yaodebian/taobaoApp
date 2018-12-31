@@ -1,7 +1,14 @@
 <template>
   <div class="goodPage">
-    <mt-header title="" fixed class="goodpage-head">
-      <router-link :to="lastPath" slot="left">
+    <mt-header
+      title=""
+      fixed
+      class="goodpage-head"
+    >
+      <router-link
+        :to="lastPath"
+        slot="left"
+      >
         <mt-button icon="back">返回</mt-button>
       </router-link>
     </mt-header>

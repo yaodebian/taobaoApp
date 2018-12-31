@@ -2,19 +2,41 @@
   <div>
     <div class="search-head">
       <mt-header class="search-headbar">
-        <router-link to="/" slot="left">
+        <router-link
+          to="/"
+          slot="left"
+        >
           <mt-button icon="back">返回</mt-button>
         </router-link>
-        <mt-button slot="right" @click="getGoods(searchValue)">搜索</mt-button>
+        <mt-button
+          slot="right"
+          @click="getGoods(searchValue)"
+        >搜索</mt-button>
       </mt-header>
-      <div class="search-space" @keyup.enter="getGoods(searchValue)">
-        <mt-search v-model="searchValue" placeholder="迪凯斯T恤"></mt-search>
+      <div
+        class="search-space"
+        @keyup.enter="getGoods(searchValue)"
+      >
+        <mt-search
+          v-model="searchValue"
+          placeholder="迪凯斯T恤"
+        ></mt-search>
       </div>
     </div>
     <div class="search-keywords">
-      <div v-for="(item, index) in keywords" :key="index" @click="getGoods(item)">
-        <mt-cell :title="item" value="">
-          <i class="iconfont icon-xiejiantou search-icon-stand" @click.stop="addToSearch(item)"></i>
+      <div
+        v-for="(item, index) in keywords"
+        @click="getGoods(item)"
+        :key="index"
+      >
+        <mt-cell
+          :title="item"
+          value=""
+        >
+          <i
+            class="iconfont icon-xiejiantou search-icon-stand"
+            @click.stop="addToSearch(item)"
+          ></i>
         </mt-cell>
       </div>
     </div>
@@ -71,52 +93,52 @@ export default {
 </script>
 <style>
 .search-head {
-    position: fixed;
-    width: 100%;
-    height: 1.2rem;
-    top: 0;
-    left: 0;
+  position: fixed;
+  width: 100%;
+  height: 1.2rem;
+  top: 0;
+  left: 0;
 }
 
 .search-headbar {
-    background: #f0f0f0 !important;
-    color: #666 !important;
+  background: #f0f0f0 !important;
+  color: #666 !important;
 }
 
 .search-space {
-    position: absolute;
-    height: 1rem !important;
-    top: 0.1rem;
-    left: 50%;
-    margin-left: -3rem;
+  position: absolute;
+  height: 1rem !important;
+  top: 0.1rem;
+  left: 50%;
+  margin-left: -3rem;
 }
 
 .search-space .mint-search {
-    height: 1rem !important;
+  height: 1rem !important;
 }
 
 .search-space .mint-searchbar {
-    padding: 0;
-    background: transparent;
+  padding: 0;
+  background: transparent;
 }
 
 .search-space .mint-searchbar-inner {
-    border-radius: 0.5rem/50%;
-    width: 6rem;
-    height: 0.8rem;
+  border-radius: 0.5rem/50%;
+  width: 6rem;
+  height: 0.8rem;
 }
 
 .search-space .mint-searchbar-cancel {
-    display: none;
+  display: none;
 }
 
 .search-keywords {
-    margin-top: 1.2rem;
+  margin-top: 1.2rem;
 }
 
 .search-icon-stand {
-    font-size: 0.44rem !important;
-    vertical-align: middle;
-    color: #666;
+  font-size: 0.44rem !important;
+  vertical-align: middle;
+  color: #666;
 }
 </style>

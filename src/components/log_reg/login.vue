@@ -1,20 +1,32 @@
 <template>
-    <div>
-        <loginHead></loginHead>
-        <div class="loginBox">
-            <div v-if="loginMethod">
-                <checkLogin></checkLogin>
-            </div>
-            <div v-if="!loginMethod">
-                <passLogin></passLogin>
-            </div>
-            <mt-button type="default" class="login-button" :disabled="buttonActive" @click="login(loginMethod)">登录</mt-button>
-            <p class="loginOptions">
-                <span class="optionItem" v-text="`${loginMethod ? '账号密码登录':'短信验证码登录'}`" @click="logMethodToggle"></span>
-                <span class="optionItem" @click="goReg">注册</span>
-            </p>
-        </div>
+  <div>
+    <loginHead></loginHead>
+    <div class="loginBox">
+      <div v-if="loginMethod">
+        <checkLogin></checkLogin>
+      </div>
+      <div v-if="!loginMethod">
+        <passLogin></passLogin>
+      </div>
+      <mt-button
+        type="default"
+        class="login-button"
+        :disabled="buttonActive"
+        @click="login(loginMethod)"
+      >登录</mt-button>
+      <p class="loginOptions">
+        <span
+          class="optionItem"
+          v-text="`${loginMethod ? '账号密码登录':'短信验证码登录'}`"
+          @click="logMethodToggle"
+        ></span>
+        <span
+          class="optionItem"
+          @click="goReg"
+        >注册</span>
+      </p>
     </div>
+  </div>
 </template>
 <script>
 import { mapGetters } from 'vuex'
@@ -47,12 +59,12 @@ export default {
               }
             }
           )
-          .then(function(res) {
+          .then(function (res) {
             vm.$store.dispatch('initUser', res.data)
             vm.$store.dispatch('login')
             vm.$router.push('/personal')
           })
-          .catch(function(err) {
+          .catch(function (err) {
             console.log(err)
           })
       }

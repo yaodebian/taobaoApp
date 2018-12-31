@@ -1,8 +1,8 @@
 <template>
-    <div>
-        <regHead></regHead>
-        <regBox></regBox>
-    </div>
+  <div>
+    <regHead></regHead>
+    <regBox></regBox>
+  </div>
 </template>
 <script>
 import regHead from './regBlocks/regHead'

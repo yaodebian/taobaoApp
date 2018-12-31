@@ -1,10 +1,10 @@
 <template>
-    <div>
-        <homeHead></homeHead>
-        <homeSwipe></homeSwipe>
-        <hotItems></hotItems>
-        <topline></topline>
-    </div>
+  <div>
+    <homeHead></homeHead>
+    <homeSwipe></homeSwipe>
+    <hotItems></hotItems>
+    <topline></topline>
+  </div>
 </template>
 <script>
 import homeHead from './homeBlocks/homeHead'
@@ -140,7 +140,11 @@ export default {
 }
 
 .top-line-pic-lay {
-  background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0) 80%);
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1),
+    rgba(255, 255, 255, 0) 80%
+  );
   width: 2.2rem;
   height: 1.2rem;
   position: relative;

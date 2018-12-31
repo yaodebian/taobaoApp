@@ -9,6 +9,8 @@
 [项目截图](https://github.com/yaodebian/taobaoApp#项目截图)<br>
 [功能添加](https://github.com/yaodebian/taobaoApp#功能添加)<br>
 [备注](https://github.com/yaodebian/taobaoApp#备注)<br>
+<br>
+[项目重构及完善](https://github.com/yaodebian/taobaoApp#项目重构及完善)
 
 项目实现：
 ----
@@ -88,3 +90,7 @@
 ----
 * 项目中只包含了前台的相关代码，后台只是为了实现登录注册;
 * 虽然设置了eslint，但是编写时并未开启，故运行会有很多代码规范问题;
+
+项目重构及完善
+----
+* v0.1.0: 构建基本的购物车功能（仅供学习）;

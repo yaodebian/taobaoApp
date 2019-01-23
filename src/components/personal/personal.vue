@@ -63,25 +63,25 @@
           <span class="column-tip">查看更多订单></span>
         </p>
         <div class="column-items">
-          <div>
+          <div @click="orderList('1')">
             <p>
               <i class="iconfont icon-icon-_fukuan column-icon colum-icon-order"></i>
             </p>
             <p>待付款</p>
           </div>
-          <div>
+          <div @click="orderList('2')">
             <p>
               <i class="iconfont icon-daifahuo column-icon colum-icon-order"></i>
             </p>
             <p>待发货</p>
           </div>
-          <div>
+          <div @click="orderList('3')">
             <p>
               <i class="iconfont icon-daishouhuo column-icon colum-icon-order"></i>
             </p>
             <p>待收货</p>
           </div>
-          <div>
+          <div @click="orderList('4')">
             <p>
               <i class="iconfont icon-daipingjia column-icon colum-icon-order"></i>
             </p>
@@ -254,7 +254,6 @@ export default {
         $('.person-box').css('opacity', 0)
       }
     },
-
     easySetSkin() {
       let that = this
       let skinSta = this.skinSta
@@ -267,9 +266,12 @@ export default {
 
       this.$store.dispatch('setSkin', randomCode)
     },
-
     settingPage() {
       this.$router.push('/user/setting')
+    },
+    orderList (index) {
+      this.$store.dispatch('initOrderTabIndex', index)
+      this.$router.push('/order/list')
     }
   },
   computed: {

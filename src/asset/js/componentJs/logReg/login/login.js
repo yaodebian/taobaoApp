@@ -16,55 +16,55 @@ function goReg() {
 
 function checkLogin(that, count) {
   that.axios
-  .post(
-    "http://localhost:8081/user/login", {
-      phone: count,
-      flag: true
-    }, {
-      headers: {
-        "Content-Type": "application/json;charset=utf-8"
+    .post(
+      "http://localhost:8081/user/login", {
+        phone: count,
+        flag: true
+      }, {
+        headers: {
+          "Content-Type": "application/json;charset=utf-8"
+        }
       }
-    }
-  )
-  .then(function (res) {
-    that.$store.dispatch("initUser", res.data)
-    that.$store.dispatch("login")
-    that.$router.push("/personal")
-  })
-  .catch(function (err) {
-    console.log(err)
-  })
+    )
+    .then(function (res) {
+      that.$store.dispatch("initUser", res.data)
+      that.$store.dispatch("login")
+      that.$router.push("/personal")
+    })
+    .catch(function (err) {
+      console.log(err)
+    })
 }
 
 function countLogin(that, count, password) {
   that.axios
-  .post(
-    "http://localhost:8081/user/login", {
-      count,
-      password,
-      flag: false
-    }, {
-      headers: {
-        "Content-Type": "application/json;charset=utf-8"
+    .post(
+      "http://localhost:8081/user/login", {
+        count,
+        password,
+        flag: false
+      }, {
+        headers: {
+          "Content-Type": "application/json;charset=utf-8"
+        }
       }
-    }
-  )
-  .then(function (res) {
-    if(!res.data){
-      Toast({
-        message: "用户名或密码出错",
-        position: "middle",
-        duration: 2000
-      })
-      return
-    }
-    that.$store.dispatch("initUser", res.data)
-    that.$store.dispatch("login")
-    that.$router.push("/personal")
-  })
-  .catch(function (err) {
-    console.log(err)
-  })
+    )
+    .then(function (res) {
+      if (!res.data) {
+        Toast({
+          message: "用户名或密码出错",
+          position: "middle",
+          duration: 2000
+        })
+        return
+      }
+      that.$store.dispatch("initUser", res.data)
+      that.$store.dispatch("login")
+      that.$router.push("/personal")
+    })
+    .catch(function (err) {
+      console.log(err)
+    })
 }
 
 function login(loginMethod) {
@@ -116,7 +116,7 @@ export default {
     goReg,
     login
   },
-  watch:{
+  watch: {
     password
   }
 }

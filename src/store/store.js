@@ -13,6 +13,8 @@ import userSet from './modules/userSet.js'
 import keywords from './modules/keywords.js'
 import searchVal from './modules/searchVal.js'
 import seller from './modules/seller.js'
+import order from './modules/order.js'
+import address from './modules/address.js'
 
 Vue.use(Vuex)
 
@@ -29,7 +31,9 @@ const state = {
   ...userSet.state,
   ...keywords.state,
   ...searchVal.state,
-  ...seller.state
+  ...seller.state,
+  ...order.state,
+  ...address.state
 }
 
 const mutations = {
@@ -45,7 +49,9 @@ const mutations = {
   ...userSet.mutations,
   ...keywords.mutations,
   ...searchVal.mutations,
-  ...seller.mutations
+  ...seller.mutations,
+  ...order.mutations,
+  ...address.mutations
 }
 
 const getters = {
@@ -61,7 +67,9 @@ const getters = {
   ...userSet.getters,
   ...keywords.getters,
   ...searchVal.getters,
-  ...seller.getters
+  ...seller.getters,
+  ...order.getters,
+  ...address.getters
 }
 
 const actions = {
@@ -77,7 +85,9 @@ const actions = {
   ...userSet.actions,
   ...keywords.actions,
   ...searchVal.actions,
-  ...seller.actions
+  ...seller.actions,
+  ...order.actions,
+  ...address.actions
 }
 
 export default new Vuex.Store({

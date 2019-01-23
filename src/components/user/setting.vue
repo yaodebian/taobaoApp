@@ -28,9 +28,9 @@
         <p class="set-hr-line"></p>
       </div>
       <mt-cell
-        title="我的收获地址"
+        title="我的收货地址"
         class="set-bottomMargin"
-        to="#"
+        to="/ship"
         value=""
       >
         <i class="iconfont icon-icon_on_the_right set-icon-right"></i>
@@ -38,14 +38,12 @@
       <mt-cell
         title="账户与安全"
         class="set-bottomMargin"
-        to="#"
         value=""
       >
         <i class="iconfont icon-icon_on_the_right set-icon-right"></i>
       </mt-cell>
       <mt-cell
         title="地区设置"
-        to="#"
         value=""
       >
         <i class="iconfont icon-icon_on_the_right set-icon-right"></i>
@@ -55,7 +53,6 @@
       </div>
       <mt-cell
         title="音效与通知"
-        to="#"
         value=""
       >
         <i class="iconfont icon-icon_on_the_right set-icon-right"></i>
@@ -65,7 +62,6 @@
       </div>
       <mt-cell
         title="隐私"
-        to="#"
         value=""
       >
         <i class="iconfont icon-icon_on_the_right set-icon-right"></i>
@@ -76,14 +72,12 @@
       <mt-cell
         title="通用"
         class="set-bottomMargin"
-        to="#"
         value=""
       >
         <i class="iconfont icon-icon_on_the_right set-icon-right"></i>
       </mt-cell>
       <mt-cell
         title="问题反馈"
-        to="#"
         value=""
       >
         <i class="iconfont icon-icon_on_the_right set-icon-right"></i>
@@ -93,7 +87,6 @@
       </div>
       <mt-cell
         title="关于手机淘宝"
-        to="#"
         value=""
       >
         <i class="iconfont icon-icon_on_the_right set-icon-right"></i>
@@ -107,7 +100,8 @@
 </template>
 <script>
 import { mapGetters } from 'vuex'
-import cookie from "../../asset/js/toolJs/cookie.js"
+import cookie from '../../asset/js/toolJs/cookie'
+import loginOp from '../../asset/js/toolJs/loginOp'
 export default {
   data() {
     return {
@@ -116,14 +110,29 @@ export default {
   },
   beforeRouteEnter(to, from, next) {
     next(vm => {
-      if (!vm.$store.getters.loginSta) {
-        vm.$router.push('/login')
-      }
-      else {
+      function fn(vm) {
         vm.$store.dispatch('initUserHead', {
           path: '/personal',
           label: '设置'
         })
+      }
+      if (!vm.loginSta) {
+        if (!cookie.getCookie('connect.sid')) {
+          vm.$router.push('/login')
+          return
+        }
+        new Promise((resolve, reject) => {
+          loginOp(resolve, reject, vm)
+        })
+          .then((data) => {
+            fn(vm)
+          })
+          .catch((err) => {
+            console.log(err)
+          })
+        return
+      } else {
+        fn(vm)
       }
     })
   },
@@ -135,11 +144,11 @@ export default {
       this.$store.dispatch('logOff')
       this.$store.dispatch('clearUserInfo')
       this.$router.push('/login')
-      cookie.delCookie('phone')
+      cookie.delCookie('connect.sid')
     }
   },
   computed: {
-    ...mapGetters(['username', 'nick', 'userImg'])
+    ...mapGetters(['username', 'nick', 'userImg', 'loginSta'])
   }
 }
 </script>

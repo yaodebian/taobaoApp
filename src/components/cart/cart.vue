@@ -2,6 +2,7 @@
   <!-- 购物车组件 -->
   <div id="cart">
     <cartHead></cartHead>
+    <!-- 购物车商品列表 -->
     <div
       class="cart-items"
       v-if="cartItems.length !== 0"
@@ -43,6 +44,14 @@
         ></span>
       </p>
     </div>
+    <div
+      class="cart-null"
+      v-if="cartItems.length === 0"
+    >
+      <i class="iconfont icon-gouwuche16ge cart-null-icon"></i>
+      <p class="cart-null-info">购物车竟然是空的</p>
+      <p class="cart-null-tip">再忙，也要记得买点什么犒赏自己~</p>
+    </div>
   </div>
 </template>
 <script>
@@ -52,6 +61,8 @@ import {
 import Vue from 'vue'
 // 浮点数计算函数，解决浮点数相加减可能出现的误差问题
 import op from '../../asset/js/toolJs/floatCom'
+import cookie from '../../asset/js/toolJs/cookie'
+import loginOp from '../../asset/js/toolJs/loginOp'
 import cartItem from './cartCom/cartItem.vue'
 import cartHead from './cartHead'
 import { mapGetters } from 'vuex'
@@ -65,40 +76,52 @@ export default {
     }
   },
   beforeRouteEnter(to, from, next) {
+    function fn(vm) {
+      let userId = vm.userId
+      // 将tab设置为购物车页面选中
+      vm.$store.dispatch("initSelectedNav", "cart")
+      // 获取购物车列表
+      vm.axios.get(`http://localhost:8081/cart/getCarts?userId=${userId}`)
+        .then(function (res) {
+          // 将获取的列表在vuex中进行初始化
+          vm.$store.dispatch('initCartItems', res.data)
+          // 初始化购物车列表中商铺的选中状态(checkVals)和每个商铺中选中的商品的总价格和总数量(selectedItems)
+          for (let i = 0; i < res.data.length; i++) {
+            vm.checkVals.push(false)
+            vm.selectedItems.push({
+              price: 0,
+              count: 0
+            })
+            // 初始化每个商铺中商品的选中状态
+            vm.$nextTick(() => {
+              vm.$refs.children[i].initCheckVals()
+            })
+          }
+        })
+        .catch(function (err) {
+          Toast({
+            message: '购物车列表加载失败',
+            position: 'middle',
+            duration: 2000
+          })
+          console.log(err)
+        })
+    }
     next(vm => {
       if (vm.loginSta) {
-        let userId = vm.userId
-        // 将tab设置为购物车页面选中
-        vm.$store.dispatch("initSelectedNav", "cart")
-        // 获取购物车列表
-        vm.axios.get(`http://localhost:8081/cart/getCarts?userId=${userId}`)
-          .then(function (res) {
-            // 将获取的列表在vuex中进行初始化
-            vm.$store.dispatch('initCartItems', res.data)
-            // 初始化购物车列表中商铺的选中状态(checkVals)和每个商铺中选中的商品的总价格和总数量(selectedItems)
-            for (let i = 0; i < res.data.length; i++) {
-              vm.checkVals.push(false)
-              vm.selectedItems.push({
-                price: 0,
-                count: 0
-              })
-              // 初始化每个商铺中商品的选中状态
-              vm.$nextTick(() => {
-                vm.$refs.children[i].initCheckVals()
-              })
-            }
-          })
-          .catch(function (err) {
-            Toast({
-              message: '购物车列表加载失败',
-              position: 'middle',
-              duration: 2000
-            })
-            console.log(err)
-          })
-      // 为登录状态跳转到登录状态
+        fn(vm)
+        // 为登录状态跳转到登录状态
       } else {
-        vm.$router.push("/login")
+        if (cookie.getCookie('connect.sid')) {
+          new Promise((resolve, reject) => {
+            loginOp(resolve, reject, vm)
+          })
+          .then((data) => {
+            fn(vm)
+          })
+          return
+        }
+        vm.$router.push('/login')
       }
     })
   },
@@ -173,43 +196,16 @@ export default {
     },
     // 购物车支付
     payoff() {
-      let that = this
-      // 首先将数据库中的购物车数据清空
-      this.axios.post('http://localhost:8081/cart/delCart', {
-        userId: that.userId,
-        goods: that.selectedCart
-      }, {
-          headers: {
-            "Content-Type": "application/json;charset=utf-8"
-          }
+      if (this.selectedNum === 0) {
+        Toast({
+          message: '你还没有选择宝贝哦',
+          position: 'middle',
+          duration: 2000
         })
-        .then(function (res) {
-          Toast({
-            message: '支付成功',
-            position: 'middle',
-            duration: 2000
-          })
-          // 删除相应store里面的数据
-          that.$store.dispatch('removeCartItem', that.$refs.children)
-          // 重新初始化checkVals和selectedItems
-          that.checkVals = []
-          that.selectedItems = []
-          for (let i = 0; i < that.cartItems.length; i++) {
-            that.checkVals.push(false)
-            that.selectedItems.push({
-              price: 0,
-              count: 0
-            })
-          }
-        })
-        .catch(function (err) {
-          Toast({
-            message: '支付失败',
-            position: 'middle',
-            duration: 2000
-          })
-          console.log(err)
-        })
+        return
+      }
+      this.$router.push('/order/check')
+      this.$store.dispatch('initOrderList')
     }
   },
   watch: {
@@ -385,5 +381,31 @@ export default {
   padding: 0.1rem 0.2rem;
   border-radius: 0.2rem;
   background: #ff4117;
+}
+
+.cart-null {
+  width: 100%;
+  height: 10rem;
+  background: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-null-icon {
+  font-size: 1.5rem !important;
+  color: #fec36c;
+  background-color: #ff9900;
+  border-radius: 50%;
+  padding: 1rem;
+}
+
+.cart-null-info {
+  font-size: 0.6rem;
+}
+
+.cart-null-tip {
+  margin-top: 0.2rem;
 }
 </style>

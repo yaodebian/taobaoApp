@@ -18,6 +18,9 @@ import {
   Toast
 } from 'mint-ui'
 import trim from '../../asset/js/toolJs/trim.js'
+import cookie from '../../asset/js/toolJs/cookie'
+import loginOp from '../../asset/js/toolJs/loginOp'
+import { mapGetters } from 'vuex'
 export default {
   data() {
     return {
@@ -25,17 +28,36 @@ export default {
     }
   },
   beforeRouteEnter(to, from, next) {
+    function fn(vm) {
+      vm.$store.dispatch("initUserHead", {
+        path: '/user/userInfo',
+        label: '淘宝昵称'
+      })
+    }
     next(vm => {
       vm.nick = vm.$store.state.nick
-      if (!vm.$store.getters.loginSta) {
-        vm.$router.push("/login")
-      } else {
-        vm.$store.dispatch("initUserHead", {
-          path: '/user/userInfo',
-          label: '淘宝昵称'
+      if (!vm.loginSta) {
+        if (!cookie.getCookie('connect.sid')) {
+          vm.$router.push('/login')
+          return
+        }
+        new Promise((resolve, reject) => {
+          loginOp(resolve, reject, vm)
         })
+          .then((data) => {
+            fn(vm)
+          })
+          .catch((err) => {
+            console.log(err)
+          })
+        return
+      } else {
+        fn(vm)
       }
     })
+  },
+  computed: {
+    ...mapGetters(['loginSta'])
   },
   methods: {
     saveNick() {

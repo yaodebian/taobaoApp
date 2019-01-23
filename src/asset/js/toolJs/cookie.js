@@ -3,7 +3,7 @@ function getCookie(attr) {
     let start = document.cookie.indexOf(attr + "=")
     if (start !== -1) {
       start = start + attr.length + 1
-      let end = document.cookie.indexOf("", start)
+      let end = document.cookie.indexOf(";", start)
       if (end === -1) {
         end = document.cookie.length
       }
@@ -14,11 +14,15 @@ function getCookie(attr) {
 }
 
 function delCookie(name) {
+  console.log(document.cookie)
   var exp = new Date()
   exp.setTime(exp.getTime() - 1)
   var cval = this.getCookie(name)
-  if (cval != null)
-    document.cookie = name + "=" + cval + ";expires=" + exp.toGMTString()
+  console.log(cval)
+  if (cval != null) {
+    document.cookie = name + "=" + cval + ";path=/;expires=" + exp.toGMTString()
+  }
+  console.log(document.cookie)  
 }
 
 export default {

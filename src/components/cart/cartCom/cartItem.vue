@@ -41,7 +41,7 @@
         <!-- 商品logo -->
         <img
           class="cart-good-img"
-          :src="`/static/imgs/goods/${item.img}`"
+          :src="`http://localhost:8081/imgs/${item.img}`"
           @click="routeShowPage(index)"
           alt=""
         >
@@ -236,7 +236,7 @@ export default {
     /**
      * 监听checkVals的变化
      */
-    checkVals(newVal, oldVal) {
+    checkVals (newVal, oldVal) {
       // 商品结算则不执行相应的动作
       if (this.isPaying) {
         this.isPaying = false

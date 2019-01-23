@@ -11,6 +11,7 @@ const mutations = {
    */
   initCartItems(state, data) {
     state.cartItems = data
+    state.selectedInfo = {}
   },
   /**
    * 每次我们选取商品时，只要将相应店铺选中的商品进行重新赋值即可

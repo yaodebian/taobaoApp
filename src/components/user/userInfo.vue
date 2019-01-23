@@ -58,6 +58,8 @@
 import {
   mapGetters
 } from 'vuex'
+import cookie from '../../asset/js/toolJs/cookie'
+import loginOp from '../../asset/js/toolJs/loginOp'
 export default {
   data() {
     return {
@@ -65,19 +67,35 @@ export default {
     }
   },
   beforeRouteEnter(to, from, next) {
+    function fn(vm) {
+      vm.$store.dispatch("initUserHead", {
+        path: '/user/setting',
+        label: '个人资料'
+      })
+    }
     next(vm => {
-      if (!vm.$store.getters.loginSta) {
-        vm.$router.push("/login")
-      } else {
-        vm.$store.dispatch("initUserHead", {
-          path: '/user/setting',
-          label: '个人资料'
+      if (!vm.loginSta) {
+        if (!cookie.getCookie('connect.sid')) {
+          vm.$router.push('/login')
+          return
+        }
+        new Promise((resolve, reject) => {
+          loginOp(resolve, reject, vm)
         })
+          .then((data) => {
+            fn(vm)
+          })
+          .catch((err) => {
+            console.log(err)
+          })
+        return
+      } else {
+        fn(vm)
       }
     })
   },
   computed: {
-    ...mapGetters(['username', 'nick', 'userImg'])
+    ...mapGetters(['username', 'nick', 'userImg', 'loginSta'])
   }
 }
 </script>

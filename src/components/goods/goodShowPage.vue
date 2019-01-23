@@ -33,7 +33,7 @@ export default {
   beforeRouteEnter(to, from, next) {
     next(vm => {
       vm.lastPath = from.path
-
+      console.log(from.path)
       vm.axios.post(
         'http://localhost:8081/seller/getSeller',
         {

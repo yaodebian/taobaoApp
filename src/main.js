@@ -14,7 +14,10 @@ import {
   Field,
   Cell,
   Popup,
-  Search
+  Search,
+  Switch,
+  TabContainer, 
+  TabContainerItem
 } from 'mint-ui'
 import 'mint-ui/lib/style.css'
 
@@ -38,6 +41,9 @@ Vue.component(Field.name, Field)
 Vue.component(Cell.name, Cell)
 Vue.component(Popup.name, Popup)
 Vue.component(Search.name, Search)
+Vue.component(Switch.name, Switch)
+Vue.component(TabContainer.name, TabContainer)
+Vue.component(TabContainerItem.name, TabContainerItem)
 
 Vue.config.productionTip = false
 axios.defaults.withCredentials = true

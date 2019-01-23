@@ -47,8 +47,9 @@ export default {
       vm.$store.dispatch('initLogReg')
       if (vm.loginSta) {
         vm.$router.push('/')
+        return
       }
-      if (cookie.getCookie('phone')) {
+      if (cookie.getCookie('connect.sid')) {
         vm.axios
           .post(
             'http://localhost:8081/user/login',
